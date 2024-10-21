@@ -28,27 +28,5 @@ export async function getGeminiData(searchTerm) {
     });
 
     const result = await chatSession.sendMessage(searchTerm);
-    return result.response.text();
-}
-
-//   run();
-
-// const { geminiApiKey } = require("../api.config");
-
-// const baseUrl = 'https://api.gemini.com/v1';
-
-// const getGeminiData = async (searchTerm) => {
-//     try {
-//         const response = await fetch(`${baseUrl}<correct_endpoint>?searchTerm=${searchTerm}`, {
-//             headers: {
-//                 'Content-Type': 'application/json',
-//                 'Authorization': `Bearer ${geminiApiKey}`
-//             }
-//         })
-//         return response.data;
-//     } catch (error) {
-//         console.log(error.message)
-//     }
-// };
-
-// export default getGeminiData;
+    return result.response.text;
+};
